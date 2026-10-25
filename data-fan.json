@@ -1,0 +1,67 @@
+{
+ "schema": 1,
+ "category": "fan",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "fan-arctic-p12-pwm-pst",
+   "category": "fan",
+   "brand": "Arctic",
+   "name": "Arctic P12 PWM PST (120 mm)",
+   "tier": 1,
+   "buyPrice": 10,
+   "sellPrice": 12,
+   "desc": "Sehr günstiger 120-mm-Lüfter mit hohem Luftdurchsatz.",
+   "specs": {
+    "sizeMM": 120,
+    "maxRPM": 1800,
+    "rgb": false
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "airflow": 60
+   }
+  },
+  {
+   "id": "fan-corsair-icue-sp120-rgb-elite",
+   "category": "fan",
+   "brand": "Corsair",
+   "name": "Corsair iCUE SP120 RGB ELITE (120 mm)",
+   "tier": 2,
+   "buyPrice": 25,
+   "sellPrice": 30,
+   "desc": "120-mm-Lüfter mit RGB-Beleuchtung für ein buntes Gehäuse.",
+   "specs": {
+    "sizeMM": 120,
+    "maxRPM": 1500,
+    "rgb": true
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "airflow": 58
+   },
+   "unsure": [
+    "maxRPM"
+   ]
+  },
+  {
+   "id": "fan-noctua-nf-a12x25-pwm",
+   "category": "fan",
+   "brand": "Noctua",
+   "name": "Noctua NF-A12x25 PWM (120 mm)",
+   "tier": 3,
+   "buyPrice": 33,
+   "sellPrice": 40,
+   "desc": "Sehr leiser und kräftiger Premium-Lüfter.",
+   "specs": {
+    "sizeMM": 120,
+    "maxRPM": 2000,
+    "rgb": false
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "airflow": 80
+   }
+  }
+ ]
+}

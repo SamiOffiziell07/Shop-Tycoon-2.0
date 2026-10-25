@@ -1,0 +1,167 @@
+{
+ "schema": 1,
+ "category": "cooler",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "cooler-arctic-freezer-36",
+   "category": "cooler",
+   "brand": "Arctic",
+   "name": "Arctic Freezer 36",
+   "tier": 1,
+   "buyPrice": 32,
+   "sellPrice": 38,
+   "desc": "Preiswerter Tower-Kühler mit guter Leistung für Prozessoren der Einsteiger- und Mittelklasse.",
+   "specs": {
+    "type": "Luft",
+    "heightMM": 159,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 1
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "cooling": 58
+   },
+   "unsure": [
+    "heightMM"
+   ]
+  },
+  {
+   "id": "cooler-deepcool-ak400",
+   "category": "cooler",
+   "brand": "DeepCool",
+   "name": "DeepCool AK400",
+   "tier": 1,
+   "buyPrice": 30,
+   "sellPrice": 36,
+   "desc": "Kompakter, günstiger Tower-Kühler mit solider Kühlleistung.",
+   "specs": {
+    "type": "Luft",
+    "heightMM": 155,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 1
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "cooling": 56
+   },
+   "unsure": [
+    "heightMM"
+   ]
+  },
+  {
+   "id": "cooler-thermalright-peerless-assassin-120-se",
+   "category": "cooler",
+   "brand": "Thermalright",
+   "name": "Thermalright Peerless Assassin 120 SE",
+   "tier": 2,
+   "buyPrice": 40,
+   "sellPrice": 48,
+   "desc": "Doppelturm-Kühler mit sehr gutem Preis-Leistungs-Verhältnis und zwei Lüftern.",
+   "specs": {
+    "type": "Luft",
+    "heightMM": 155,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 2
+   },
+   "verified": "geprueft",
+   "perf": {
+    "cooling": 72
+   },
+   "source": "galaxus.de, Produktvergleich Noctua NH-D15/Peerless Assassin 120 SE, abgerufen 2026-10-24"
+  },
+  {
+   "id": "cooler-noctua-nh-d15",
+   "category": "cooler",
+   "brand": "Noctua",
+   "name": "Noctua NH-D15",
+   "tier": 4,
+   "buyPrice": 105,
+   "sellPrice": 126,
+   "desc": "Legendärer Doppelturm-Luftkühler: leise und sehr stark, aber groß. Prüfe die Gehäusefreiheit!",
+   "specs": {
+    "type": "Luft",
+    "heightMM": 165,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 2
+   },
+   "verified": "geprueft",
+   "perf": {
+    "cooling": 82
+   },
+   "source": "galaxus.de, Produktvergleich Noctua NH-D15 Chromax/Peerless Assassin 120 SE, abgerufen 2026-10-24",
+   "note": "Quelle nennt die Chromax-Variante; Maße und Sockel sind identisch zur Standardversion."
+  },
+  {
+   "id": "cooler-arctic-liquid-freezer-iii-360",
+   "category": "cooler",
+   "brand": "Arctic",
+   "name": "Arctic Liquid Freezer III 360",
+   "tier": 5,
+   "buyPrice": 125,
+   "sellPrice": 150,
+   "desc": "Wasserkühlung mit 360-mm-Radiator für Hochleistungs-Prozessoren. Das Gehäuse braucht Radiatorplatz.",
+   "specs": {
+    "type": "AiO-Wasserkühlung",
+    "radiatorMM": 360,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 3
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "cooling": 95
+   },
+   "unsure": [
+    "sockets"
+   ]
+  },
+  {
+   "category": "cooler",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "cooler-noctua-nh-u12s",
+   "brand": "Noctua",
+   "name": "Noctua NH-U12S",
+   "tier": 3,
+   "buyPrice": 68,
+   "sellPrice": 82,
+   "desc": "Leiser, kompakter Tower-Kühler mit guter Leistung für Mittelklasse-Prozessoren.",
+   "specs": {
+    "type": "Luft",
+    "heightMM": 158,
+    "sockets": [
+     "AM4",
+     "AM5",
+     "LGA1700"
+    ],
+    "fans": 1
+   },
+   "perf": {
+    "cooling": 70
+   },
+   "unsure": [
+    "sockets"
+   ]
+  }
+ ]
+}

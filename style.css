@@ -1,0 +1,232 @@
+:root {
+  --bg: #0e1624;
+  --card: rgba(18, 28, 46, 0.94);
+  --accent: #3b82f6;
+  --accent-2: #22c1a6;
+  --text: #f2f5fa;
+  --muted: #9fb0c7;
+  --warn: #ffb454;
+  --sat: env(safe-area-inset-top, 0px);
+  --sab: env(safe-area-inset-bottom, 0px);
+  --sal: env(safe-area-inset-left, 0px);
+  --sar: env(safe-area-inset-right, 0px);
+}
+
+* {
+  box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  user-select: none;
+}
+
+html, body {
+  margin: 0;
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  font-family: -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", Arial, sans-serif;
+  overflow: hidden;
+  overscroll-behavior: none;
+  touch-action: none;
+}
+
+#view {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  touch-action: none;
+}
+
+.hidden { display: none !important; }
+
+/* Unsichtbare Touch-Zonen */
+.zone { position: fixed; top: 0; bottom: 0; touch-action: none; z-index: 5; }
+#joyZone { left: 0; width: 45%; }
+#lookZone { right: 0; width: 55%; }
+
+#joyBase {
+  display: none;
+  position: fixed;
+  width: 132px;
+  height: 132px;
+  margin: -66px 0 0 -66px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.12);
+  border: 2px solid rgba(255, 255, 255, 0.35);
+  z-index: 6;
+  pointer-events: none;
+}
+#joyKnob {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.55);
+  transform: translate(-50%, -50%);
+}
+
+/* HUD */
+#hud { position: fixed; inset: 0; pointer-events: none; z-index: 10; }
+#hud > * { pointer-events: none; }
+.chip {
+  position: absolute;
+  top: calc(var(--sat) + 10px);
+  left: calc(var(--sal) + 12px);
+  padding: 7px 14px;
+  background: rgba(10, 16, 28, 0.62);
+  border-radius: 999px;
+  font-weight: 700;
+  font-size: 17px;
+  letter-spacing: 0.2px;
+}
+#repChip { left: calc(var(--sal) + 12px); top: calc(var(--sat) + 52px); font-size: 14px; color: #ffd76a; }
+
+.round {
+  pointer-events: auto !important;
+  border: 0;
+  color: var(--text);
+  background: rgba(10, 16, 28, 0.62);
+  border-radius: 50%;
+  width: 46px;
+  height: 46px;
+  font-size: 15px;
+  font-weight: 800;
+}
+#pauseBtn { position: absolute; top: calc(var(--sat) + 8px); right: calc(var(--sar) + 12px); }
+#useBtn {
+  position: absolute;
+  right: calc(var(--sar) + 22px);
+  bottom: calc(var(--sab) + 28px);
+  width: 78px;
+  height: 78px;
+  font-size: 28px;
+  background: rgba(59, 130, 246, 0.85);
+  border: 2px solid rgba(255, 255, 255, 0.7);
+  z-index: 12;
+}
+#useBtn:active { transform: scale(0.94); }
+
+#crosshair {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 8px;
+  height: 8px;
+  margin: -4px 0 0 -4px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.75);
+  box-shadow: 0 0 0 1.5px rgba(0, 0, 0, 0.35);
+}
+
+#prompt {
+  position: absolute;
+  left: 50%;
+  top: calc(50% + 26px);
+  transform: translateX(-50%);
+  padding: 8px 14px;
+  background: rgba(10, 16, 28, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-radius: 12px;
+  font-size: 16px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+#toast {
+  position: absolute;
+  left: 50%;
+  top: calc(var(--sat) + 14px);
+  transform: translateX(-50%);
+  max-width: 60%;
+  padding: 9px 16px;
+  background: rgba(34, 193, 166, 0.92);
+  color: #04221d;
+  border-radius: 12px;
+  font-weight: 700;
+  font-size: 15px;
+  text-align: center;
+}
+
+/* Menüs */
+.overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: calc(var(--sat) + 12px) calc(var(--sar) + 12px) calc(var(--sab) + 12px) calc(var(--sal) + 12px);
+  background: radial-gradient(circle at 50% 30%, rgba(30, 55, 100, 0.85), rgba(6, 10, 18, 0.95));
+  touch-action: pan-y;
+}
+#infoPanel, #pauseMenu, #settingsMenu, #helpMenu { background: rgba(4, 8, 16, 0.7); }
+
+.card {
+  width: min(420px, 100%);
+  max-height: 100%;
+  padding: 22px 20px 18px;
+  background: var(--card);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.5);
+}
+.card.scroll { overflow-y: auto; -webkit-overflow-scrolling: touch; text-align: left; }
+.card.scroll h2 { text-align: center; }
+h1 { margin: 0 0 6px; font-size: 30px; line-height: 1.1; }
+h2 { margin: 0 0 12px; font-size: 22px; }
+h3 { margin: 18px 0 4px; font-size: 16px; }
+p { margin: 0 0 14px; line-height: 1.4; color: var(--text); }
+.sub { color: var(--muted); }
+.small { font-size: 13px; color: var(--muted); margin: 8px 0 0; }
+.warn { color: var(--warn); }
+
+.btn {
+  display: block;
+  width: 100%;
+  margin: 10px 0 0;
+  padding: 15px 16px;
+  border-radius: 14px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 18px;
+  font-weight: 700;
+  touch-action: manipulation;
+}
+.btn.primary { background: var(--accent); border-color: transparent; }
+.btn.ghost { background: transparent; }
+.btn.small { font-size: 15px; padding: 11px 10px; }
+.btn:active { filter: brightness(0.85); }
+
+.row { display: flex; flex-direction: column; gap: 8px; margin: 14px 0 0; font-weight: 600; font-size: 16px; }
+.row.check { flex-direction: row; align-items: center; gap: 12px; }
+.row input[type=checkbox] { width: 24px; height: 24px; }
+.row input[type=range] { width: 100%; height: 32px; }
+.row select, textarea {
+  width: 100%;
+  padding: 12px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 16px; /* mindestens 16px, sonst zoomt iOS beim Tippen */
+  -webkit-user-select: text;
+  user-select: text;
+}
+textarea { margin-top: 8px; resize: none; font-family: ui-monospace, Menlo, monospace; font-size: 16px; }
+.row2 { display: flex; gap: 10px; }
+.row2 .btn { margin-top: 8px; }
+
+/* Querformat mit wenig Höhe: Karten kompakter */
+@media (max-height: 460px) {
+  .card { padding: 14px 16px; }
+  h1 { font-size: 24px; }
+  .btn { padding: 11px 14px; font-size: 16px; margin-top: 8px; }
+  #mainMenu .card { display: grid; }
+}

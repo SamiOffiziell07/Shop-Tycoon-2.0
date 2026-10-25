@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no, viewport-fit=cover">
+<title>Computer Shop Tycoon</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Shop Tycoon">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<meta name="theme-color" content="#0e1624">
+<meta name="format-detection" content="telephone=no">
+<link rel="manifest" href="manifest.json">
+<link rel="apple-touch-icon" href="icon-180.png">
+<link rel="icon" type="image/png" href="icon-192.png">
+<link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="shop.css">
+<link rel="stylesheet" href="game.css">
+</head>
+<body>
+<canvas id="view"></canvas>
+
+<!-- Touch-Zonen (unsichtbar): links Joystick, rechts Umsehen -->
+<div id="joyZone" class="zone"></div>
+<div id="lookZone" class="zone"></div>
+<div id="joyBase"><div id="joyKnob"></div></div>
+
+<!-- Anzeige im Spiel -->
+<div id="hud" class="hidden">
+  <div id="chips">
+    <div id="money" class="chip" title="Kontostand">€ <span id="moneyValue">0</span></div>
+    <div id="repChip" class="chip" title="Ruf und Ladenstufe">★ <span id="repValue">0</span></div>
+    <div id="dayChip" class="chip" title="Tag und Uhrzeit"><span id="dayValue">Tag 1</span></div>
+  </div>
+  <button id="pauseBtn" class="round" aria-label="Pause">❚❚</button>
+  <div id="sideBtns">
+    <button id="shopBtn" class="round" aria-label="Hardware-Einkauf öffnen">🛒</button>
+    <button id="stockBtn" class="round" aria-label="Lager öffnen">📦</button>
+    <button id="officeBtn" class="round" aria-label="Büro öffnen">☰<span id="officeBadge" class="badge hidden">0</span></button>
+  </div>
+  <div id="tutorial" class="hidden">
+    <div class="tut-title" id="tutTitle"></div>
+    <div class="tut-text" id="tutText"></div>
+    <button id="tutSkip" class="tut-skip">Tutorial überspringen</button>
+  </div>
+  <div id="custChip" class="hidden" role="button" aria-label="Kunde wartet an der Kasse">🧑 Ein Kunde wartet an der Kasse</div>
+  <div id="crosshair"></div>
+  <div id="prompt" class="hidden"></div>
+  <button id="useBtn" class="round big hidden" aria-label="Benutzen">E</button>
+</div>
+<div id="toast" class="hidden" role="status" aria-live="polite"></div>
+
+<!-- Info-Fenster für Interaktionen -->
+<div id="infoPanel" class="overlay hidden">
+  <div class="card">
+    <h2 id="infoTitle"></h2>
+    <p id="infoText"></p>
+    <button id="infoClose" class="btn primary">OK</button>
+  </div>
+</div>
+
+<!-- Büro: Einkauf, Lager, Bestellungen, Aufträge, Finanzen, Ausbau -->
+<div id="shopPanel" class="overlay shop hidden">
+  <div class="shop-wrap">
+    <header class="shop-head">
+      <button id="shopClose" class="shop-btn">← Zurück</button>
+      <div id="shopMoney" class="shop-money" aria-label="Verfügbares Geld"></div>
+    </header>
+    <div class="tabs" role="tablist" id="officeTabs">
+      <button id="tabShop" class="tab" role="tab">Einkauf</button>
+      <button id="tabStock" class="tab" role="tab">Lager <span id="stockBadge" class="badge">0</span></button>
+      <button id="tabOrders" class="tab" role="tab">Bestellungen <span id="ordersBadge" class="badge hidden">0</span></button>
+      <button id="tabJobs" class="tab" role="tab">Aufträge <span id="jobsBadge" class="badge hidden">0</span></button>
+      <button id="tabFinance" class="tab" role="tab">Finanzen</button>
+      <button id="tabUpgrades" class="tab" role="tab">Ausbau</button>
+      <button id="tabGoals" class="tab" role="tab">Ziele</button>
+    </div>
+    <div id="supBar" class="supbar hidden" aria-label="Lieferanten"></div>
+    <nav id="shopCats" class="cats" aria-label="Kategorien"></nav>
+    <div class="shop-body">
+      <section id="shopList" class="list" aria-label="Komponenten"></section>
+      <section id="shopDetail" class="detail" aria-label="Details"></section>
+    </div>
+    <section id="pageBody" class="page hidden" aria-label="Büro"></section>
+    <div id="cartBar" class="cartbar hidden"></div>
+  </div>
+</div>
+
+<!-- Werkbank: PC zusammenbauen, testen, reparieren -->
+<div id="benchPanel" class="overlay shop hidden">
+  <div class="shop-wrap">
+    <header class="shop-head">
+      <button id="benchClose" class="shop-btn">← Zurück zum Laden</button>
+      <div id="benchMoney" class="shop-money"></div>
+    </header>
+    <div class="tabs" role="tablist">
+      <button id="tabBuild" class="tab" role="tab">PC zusammenbauen</button>
+      <button id="tabPcs" class="tab" role="tab">Meine PCs <span id="pcsBadge" class="badge hidden">0</span></button>
+    </div>
+    <section id="benchBody" class="page" aria-label="Werkbank"></section>
+  </div>
+</div>
+
+<!-- Kasse: Kunden bedienen -->
+<div id="counterPanel" class="overlay shop hidden">
+  <div class="shop-wrap">
+    <header class="shop-head">
+      <button id="counterClose" class="shop-btn">← Zurück zum Laden</button>
+      <div id="counterMoney" class="shop-money"></div>
+    </header>
+    <section id="counterBody" class="page" aria-label="Kasse"></section>
+  </div>
+</div>
+
+<!-- Tagesabschluss -->
+<div id="dayPanel" class="overlay hidden">
+  <div class="card scroll">
+    <h2 id="dayTitle">Tagesabschluss</h2>
+    <div id="dayBody"></div>
+    <button id="dayClose" class="btn primary">Weiter</button>
+  </div>
+</div>
+
+<!-- Spielanleitung -->
+<div id="helpMenu" class="overlay hidden">
+  <div class="card scroll help">
+    <h2>Spielanleitung</h2>
+    <h3>Ziel</h3>
+    <p>Führe deinen Computerladen zum Erfolg: Hardware bestellen, PCs bauen und testen, Kunden bedienen, Aufträge erledigen und den Laden ausbauen.</p>
+    <h3>Steuerung</h3>
+    <p><b>Handy:</b> Links den Daumen ziehen, um zu gehen (Joystick). Rechts wischen, um dich umzusehen. Der blaue Knopf „E“ benutzt, was vor dir ist.<br><b>Tastatur:</b> W A S D oder Pfeiltasten gehen, Maus ziehen oder Pfeil links/rechts dreht den Blick, E oder Leertaste benutzt.</p>
+    <h3>Orte im Laden</h3>
+    <p><b>Regale (links):</b> Einkauf bei Lieferanten.<br><b>Schreibtisch (hinten links):</b> Büro mit Bestellungen, Aufträgen, Finanzen, Ausbau und Zielen.<br><b>Werkbank (Mitte hinten):</b> PCs bauen, starten, testen und reparieren.<br><b>Tresen (rechts):</b> Kunden bedienen.<br><b>Ausstellungs-PCs (rechts hinten):</b> eingeschaltet machen sie Kunden kaufbereiter.</p>
+    <h3>So läuft das Spiel</h3>
+    <p>1. Teile bestellen – das Geld wird sofort abgebucht, die Ware kommt nach der Lieferzeit ins Lager.<br>2. Teile an der Kasse verkaufen oder PCs an der Werkbank zusammenbauen. Unverträgliche Teile werden gesperrt und erklärt.<br>3. PCs starten und testen: Der Test zeigt Fehler und Leistungswerte.<br>4. Fertige PCs verkaufen oder Kundenaufträge erledigen (Neubau, Reparatur, Aufrüstung, Vorbestellung).<br>5. Mit Gewinn und Ruf das Lager, die Werkstatt und den Laden ausbauen.</p>
+    <h3>Tipps</h3>
+    <p>Jeder Spieltag dauert 5 Minuten. Am Tagesende wird die Miete fällig. Lange Wartezeiten und zu hohe Preise verärgern Kunden. Gute Bewertungen steigern den Ruf, höhere Ladenstufen schalten neue Lieferanten, Kunden und Aufträge frei. Wenn das Geld knapp wird, hilft im Büro unter „Finanzen“ ein Notfall-Kleinkredit.</p>
+    <h3>Hinweise zu den Daten</h3>
+    <p>Preise, Leistungswerte, Tests und Benchmarks sind Spielwerte und keine Messungen. Technische Daten stammen teils aus allgemeinem Herstellerwissen und sind im Produkt als geprüft, teilweise geprüft oder ungeprüft gekennzeichnet. Hersteller- und Produktnamen gehören ihren jeweiligen Inhabern; es besteht keine Partnerschaft. Lieferanten und Kunden sind frei erfunden.</p>
+    <button id="helpBack" class="btn primary">Zurück</button>
+  </div>
+</div>
+<!-- Hauptmenü -->
+<div id="mainMenu" class="overlay">
+  <div class="card">
+    <h1>Computer Shop<br>Tycoon</h1>
+    <p class="sub">Dein Laden für PC-Hardware</p>
+    <button id="continueBtn" class="btn primary hidden">Weiterspielen</button>
+    <button id="newBtn" class="btn">Neues Spiel</button>
+    <button id="mainSettingsBtn" class="btn ghost">Einstellungen</button>
+    <button id="mainHelpBtn" class="btn ghost">Spielanleitung</button>
+    <p id="saveInfo" class="small"></p>
+    <p id="dataWarn" class="small warn hidden"></p>
+    <p id="storageWarn" class="small warn hidden">Hinweis: Speichern ist in diesem Browser-Modus nicht dauerhaft möglich (z. B. privates Surfen).</p>
+  </div>
+</div>
+
+<!-- Pause-Menü -->
+<div id="pauseMenu" class="overlay hidden">
+  <div class="card">
+    <h2>Pause</h2>
+    <button id="resumeBtn" class="btn primary">Weiter</button>
+    <button id="saveBtn" class="btn">Speichern</button>
+    <button id="pauseSettingsBtn" class="btn">Einstellungen</button>
+    <button id="pauseHelpBtn" class="btn">Spielanleitung</button>
+    <button id="toMenuBtn" class="btn ghost">Speichern &amp; Hauptmenü</button>
+    <p id="saveMsg" class="small"></p>
+  </div>
+</div>
+
+<!-- Einstellungen -->
+<div id="settingsMenu" class="overlay hidden">
+  <div class="card scroll">
+    <h2>Einstellungen</h2>
+    <label class="row">Kamera-Empfindlichkeit
+      <input id="setSens" type="range" min="1" max="10" step="1">
+    </label>
+    <label class="row check"><input id="setInvert" type="checkbox"> Blick nach oben/unten umkehren</label>
+    <label class="row">Grafikqualität
+      <select id="setQuality">
+        <option value="low">Niedrig (spart Akku)</option>
+        <option value="normal">Normal</option>
+        <option value="high">Hoch (schärfer)</option>
+      </select>
+    </label>
+    <label class="row check"><input id="setSound" type="checkbox"> Töne</label>
+    <label class="row">Lautstärke
+      <input id="setVolume" type="range" min="0" max="10" step="1">
+    </label>
+    <button id="tutRestart" class="btn small">Tutorial neu starten</button>
+    <h3>Spielstand sichern</h3>
+    <p class="small">Kopiere den Text und bewahre ihn z. B. in Notizen auf. Er enthält deinen Spielstand.</p>
+    <textarea id="saveText" rows="3" spellcheck="false" autocapitalize="off" autocomplete="off"></textarea>
+    <div class="row2">
+      <button id="exportBtn" class="btn small">Text erzeugen</button>
+      <button id="importBtn" class="btn small">Text laden</button>
+    </div>
+    <p id="settingsMsg" class="small"></p>
+    <button id="settingsBack" class="btn primary">Zurück</button>
+  </div>
+</div>
+
+<div id="fatal" class="overlay hidden">
+  <div class="card">
+    <h2>Fehler</h2>
+    <p id="fatalText"></p>
+  </div>
+</div>
+
+<script src="engine.js"></script>
+<script src="world.js"></script>
+<script src="controls.js"></script>
+<script src="storage.js"></script>
+<script src="hardware.js"></script>
+<script src="economy.js"></script>
+<script src="inventory.js"></script>
+<script src="progression.js"></script>
+<script src="suppliers.js"></script>
+<script src="builder.js"></script>
+<script src="sim.js"></script>
+<script src="jobs.js"></script>
+<script src="customers.js"></script>
+<script src="tutorial.js"></script>
+<script src="achievements.js"></script>
+<script src="audio.js"></script>
+<script src="shop.js"></script>
+<script src="ui-common.js"></script>
+<script src="ui-shop.js"></script>
+<script src="ui-office.js"></script>
+<script src="ui-bench.js"></script>
+<script src="ui-counter.js"></script>
+<script src="game.js"></script>
+</body>
+</html>

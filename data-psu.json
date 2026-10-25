@@ -1,0 +1,140 @@
+{
+ "schema": 1,
+ "category": "psu",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "psu-corsair-cv550",
+   "category": "psu",
+   "brand": "Corsair",
+   "name": "Corsair CV550",
+   "tier": 1,
+   "buyPrice": 58,
+   "sellPrice": 70,
+   "desc": "Einfaches 550-Watt-Netzteil für Büro-PCs und Einsteiger-Gaming mit kleiner Grafikkarte.",
+   "specs": {
+    "wattage": 550,
+    "efficiency": "80 PLUS Bronze",
+    "standard": "ATX",
+    "modular": "nein",
+    "eps8": 1,
+    "pcie8": 2,
+    "hvhpwr": 0,
+    "sata": 6
+   },
+   "verified": "ungeprueft",
+   "unsure": [
+    "pcie8",
+    "eps8"
+   ]
+  },
+  {
+   "id": "psu-corsair-rm750e",
+   "category": "psu",
+   "brand": "Corsair",
+   "name": "Corsair RM750e",
+   "tier": 2,
+   "buyPrice": 105,
+   "sellPrice": 126,
+   "desc": "Voll modulares 750-Watt-Netzteil, leise und für die meisten Mittelklasse-Gaming-PCs ausreichend.",
+   "specs": {
+    "wattage": 750,
+    "efficiency": "Gold",
+    "standard": "ATX 3.x",
+    "modular": "voll",
+    "eps8": 2,
+    "pcie8": 2,
+    "hvhpwr": 1,
+    "sata": 6
+   },
+   "verified": "teilweise",
+   "source": "arvutitark.ee, Produktseite RM750e, abgerufen 2026-10-24",
+   "note": "Bestätigt: 750 W, Gold (Cybenetics), 2× PCIe-8-Pin, 6× SATA. EPS- und 16-Pin-Anschlüsse nicht bestätigt.",
+   "unsure": [
+    "eps8",
+    "hvhpwr",
+    "standard"
+   ]
+  },
+  {
+   "id": "psu-bequiet-pure-power-12-m-850w",
+   "category": "psu",
+   "brand": "be quiet!",
+   "name": "be quiet! Pure Power 12 M 850W",
+   "tier": 3,
+   "buyPrice": 135,
+   "sellPrice": 162,
+   "desc": "850 Watt mit nativem 16-Pin-Kabel: passt zu modernen Grafikkarten der Oberklasse.",
+   "specs": {
+    "wattage": 850,
+    "efficiency": "80 PLUS Gold",
+    "standard": "ATX 3.0",
+    "modular": "voll",
+    "eps8": 2,
+    "pcie8": 4,
+    "hvhpwr": 1,
+    "sata": 8
+   },
+   "verified": "ungeprueft",
+   "unsure": [
+    "pcie8",
+    "eps8",
+    "sata"
+   ]
+  },
+  {
+   "id": "psu-seasonic-focus-gx-1000",
+   "category": "psu",
+   "brand": "Seasonic",
+   "name": "Seasonic FOCUS GX-1000",
+   "tier": 4,
+   "buyPrice": 180,
+   "sellPrice": 216,
+   "desc": "1000 Watt Reserve für High-End-Grafikkarten und starke Prozessoren.",
+   "specs": {
+    "wattage": 1000,
+    "efficiency": "80 PLUS Gold",
+    "standard": "ATX 3.0",
+    "modular": "voll",
+    "eps8": 2,
+    "pcie8": 6,
+    "hvhpwr": 1,
+    "sata": 10
+   },
+   "verified": "ungeprueft",
+   "unsure": [
+    "pcie8",
+    "eps8",
+    "sata",
+    "standard"
+   ]
+  },
+  {
+   "id": "psu-bequiet-straight-power-12-1200w",
+   "category": "psu",
+   "brand": "be quiet!",
+   "name": "be quiet! Straight Power 12 1200W",
+   "tier": 5,
+   "buyPrice": 240,
+   "sellPrice": 288,
+   "desc": "1200 Watt Platinum für Extrem-Konfigurationen mit RTX 4090 oder ähnlich.",
+   "specs": {
+    "wattage": 1200,
+    "efficiency": "80 PLUS Platinum",
+    "standard": "ATX 3.0",
+    "modular": "voll",
+    "eps8": 2,
+    "pcie8": 6,
+    "hvhpwr": 1,
+    "sata": 12
+   },
+   "verified": "ungeprueft",
+   "unsure": [
+    "pcie8",
+    "eps8",
+    "sata",
+    "hvhpwr"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "schema": 1,
+ "category": "gpu",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "gpu-nvidia-geforce-rtx-3060-12gb",
+   "category": "gpu",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 3060 12 GB",
+   "tier": 1,
+   "buyPrice": 270,
+   "sellPrice": 324,
+   "desc": "Ältere Mittelklasse mit viel Videospeicher. Solide für Full-HD-Gaming.",
+   "specs": {
+    "vramGB": 12,
+    "vramType": "GDDR6",
+    "tgpW": 170,
+    "lengthMM": 242,
+    "slots": 2,
+    "pcie8": 1,
+    "psuRecW": 550
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 40
+   },
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots"
+   ]
+  },
+  {
+   "id": "gpu-amd-radeon-rx-7600-8gb",
+   "category": "gpu",
+   "brand": "AMD",
+   "name": "AMD Radeon RX 7600 8 GB",
+   "tier": 1,
+   "buyPrice": 255,
+   "sellPrice": 306,
+   "desc": "Günstige Karte für Full-HD-Spiele. Geringer Stromverbrauch.",
+   "specs": {
+    "vramGB": 8,
+    "vramType": "GDDR6",
+    "tgpW": 165,
+    "lengthMM": 240,
+    "slots": 2,
+    "pcie8": 1,
+    "psuRecW": 550
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 44
+   },
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots"
+   ]
+  },
+  {
+   "id": "gpu-nvidia-geforce-rtx-4060-8gb",
+   "category": "gpu",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 4060 8 GB",
+   "tier": 2,
+   "buyPrice": 295,
+   "sellPrice": 354,
+   "desc": "Effiziente Einsteigerkarte mit niedrigem Strombedarf, ideal für kompakte und leise Gaming-PCs.",
+   "specs": {
+    "vramGB": 8,
+    "vramType": "GDDR6",
+    "tgpW": 115,
+    "lengthMM": 240,
+    "slots": 2,
+    "pcie8": 1,
+    "psuRecW": 550
+   },
+   "verified": "teilweise",
+   "perf": {
+    "gaming": 46
+   },
+   "source": "notebookcheck.net, Vergleich RTX 4070 SUPER/RTX 4060, abgerufen 2026-10-24",
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots"
+   ]
+  },
+  {
+   "id": "gpu-nvidia-geforce-rtx-4070-super-12gb",
+   "category": "gpu",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 4070 SUPER 12 GB",
+   "tier": 3,
+   "buyPrice": 570,
+   "sellPrice": 684,
+   "desc": "Sehr gute Karte für WQHD-Gaming. Nutzt einen 16-Pin-Stromanschluss, ein Adapter liegt üblicherweise bei.",
+   "specs": {
+    "vramGB": 12,
+    "vramType": "GDDR6X",
+    "tgpW": 220,
+    "lengthMM": 244,
+    "slots": 2,
+    "pcie8": 2,
+    "psuRecW": 650
+   },
+   "verified": "teilweise",
+   "perf": {
+    "gaming": 68
+   },
+   "source": "notebookcheck.net, Vergleich RTX 4070 SUPER/RTX 4060, abgerufen 2026-10-24",
+   "note": "Leistungsaufnahme in der Quelle mit 200 W und 220 W angegeben; als Spielwert 220 W verwendet. Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "tgpW",
+    "lengthMM",
+    "slots",
+    "pcie8"
+   ]
+  },
+  {
+   "id": "gpu-amd-radeon-rx-7800-xt-16gb",
+   "category": "gpu",
+   "brand": "AMD",
+   "name": "AMD Radeon RX 7800 XT 16 GB",
+   "tier": 3,
+   "buyPrice": 490,
+   "sellPrice": 588,
+   "desc": "Viel Videospeicher und starke Rasterleistung für WQHD. Zwei 8-Pin-Anschlüsse nötig.",
+   "specs": {
+    "vramGB": 16,
+    "vramType": "GDDR6",
+    "tgpW": 263,
+    "lengthMM": 267,
+    "slots": 2.5,
+    "pcie8": 2,
+    "psuRecW": 700
+   },
+   "verified": "teilweise",
+   "perf": {
+    "gaming": 70
+   },
+   "source": "guru3d.com, RX 7800 XT Referenz-Test, abgerufen 2026-10-24",
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots"
+   ]
+  },
+  {
+   "id": "gpu-amd-radeon-rx-7900-xtx-24gb",
+   "category": "gpu",
+   "brand": "AMD",
+   "name": "AMD Radeon RX 7900 XTX 24 GB",
+   "tier": 4,
+   "buyPrice": 890,
+   "sellPrice": 1068,
+   "desc": "Flaggschiff von AMD mit 24 GB Videospeicher. Hoher Strombedarf, braucht Platz im Gehäuse.",
+   "specs": {
+    "vramGB": 24,
+    "vramType": "GDDR6",
+    "tgpW": 355,
+    "lengthMM": 287,
+    "slots": 2.5,
+    "pcie8": 2,
+    "psuRecW": 800
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 85
+   },
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots"
+   ]
+  },
+  {
+   "id": "gpu-nvidia-geforce-rtx-4080-super-16gb",
+   "category": "gpu",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 4080 SUPER 16 GB",
+   "tier": 4,
+   "buyPrice": 970,
+   "sellPrice": 1164,
+   "desc": "High-End für 4K-Gaming. Große, dreiteilige Bauform und kräftiges Netzteil erforderlich.",
+   "specs": {
+    "vramGB": 16,
+    "vramType": "GDDR6X",
+    "tgpW": 320,
+    "lengthMM": 304,
+    "slots": 3,
+    "pcie8": 3,
+    "psuRecW": 750
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 88
+   },
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots",
+    "pcie8"
+   ]
+  },
+  {
+   "id": "gpu-nvidia-geforce-rtx-4090-24gb",
+   "category": "gpu",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 4090 24 GB",
+   "tier": 5,
+   "buyPrice": 1550,
+   "sellPrice": 1860,
+   "desc": "Die schnellste Karte im Sortiment. Sehr groß, sehr durstig: Gehäuse und Netzteil müssen passen.",
+   "specs": {
+    "vramGB": 24,
+    "vramType": "GDDR6X",
+    "tgpW": 450,
+    "lengthMM": 304,
+    "slots": 3,
+    "pcie8": 4,
+    "psuRecW": 850
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 100
+   },
+   "note": "Länge und Slotbreite sind Spielwerte (Referenz- bzw. Founders-Edition-Maße); Partnerdesigns weichen ab.",
+   "unsure": [
+    "lengthMM",
+    "slots",
+    "pcie8"
+   ]
+  },
+  {
+   "category": "gpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "gpu-nvidia-geforce-rtx-4070-12gb",
+   "brand": "NVIDIA",
+   "name": "NVIDIA GeForce RTX 4070 12GB",
+   "tier": 3,
+   "buyPrice": 510,
+   "sellPrice": 612,
+   "desc": "Effiziente Oberklasse-Grafikkarte für flüssiges Spielen in hoher Auflösung.",
+   "specs": {
+    "vramGB": 12,
+    "vramType": "GDDR6X",
+    "tgpW": 200,
+    "lengthMM": 244,
+    "slots": 2,
+    "pcie8": 1,
+    "psuRecW": 650
+   },
+   "perf": {
+    "gaming": 62
+   },
+   "unsure": [
+    "lengthMM",
+    "slots",
+    "pcie8"
+   ]
+  },
+  {
+   "category": "gpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "gpu-amd-radeon-rx-7700-xt-12gb",
+   "brand": "AMD",
+   "name": "AMD Radeon RX 7700 XT 12GB",
+   "tier": 3,
+   "buyPrice": 410,
+   "sellPrice": 492,
+   "desc": "Starke Mittelklasse mit viel Videospeicher, ideal für WQHD-Gaming.",
+   "specs": {
+    "vramGB": 12,
+    "vramType": "GDDR6",
+    "tgpW": 245,
+    "lengthMM": 280,
+    "slots": 2.5,
+    "pcie8": 2,
+    "psuRecW": 700
+   },
+   "perf": {
+    "gaming": 62
+   },
+   "unsure": [
+    "lengthMM",
+    "slots",
+    "pcie8"
+   ]
+  }
+ ]
+}

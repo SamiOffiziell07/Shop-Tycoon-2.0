@@ -1,0 +1,195 @@
+{
+ "schema": 1,
+ "category": "mainboard",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "mb-asus-prime-h610m-k-d4",
+   "category": "mainboard",
+   "brand": "ASUS",
+   "name": "ASUS PRIME H610M-K D4",
+   "tier": 1,
+   "buyPrice": 75,
+   "sellPrice": 90,
+   "desc": "Einfaches Micro-ATX-Board für LGA1700 mit DDR4. Genau richtig für Büro-PCs.",
+   "specs": {
+    "socket": "LGA1700",
+    "chipset": "Intel H610",
+    "formFactor": "mATX",
+    "memType": "DDR4",
+    "ramSlots": 2,
+    "maxRamGB": 64,
+    "m2Slots": 1,
+    "sataPorts": 4,
+    "wifi": false
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "mb-gigabyte-b550-aorus-elite-v2",
+   "category": "mainboard",
+   "brand": "Gigabyte",
+   "name": "Gigabyte B550 AORUS ELITE V2",
+   "tier": 2,
+   "buyPrice": 110,
+   "sellPrice": 132,
+   "desc": "Solides ATX-Board für AM4 mit DDR4. Gute Ausstattung für Gaming-PCs der Einstiegs- und Mittelklasse.",
+   "specs": {
+    "socket": "AM4",
+    "chipset": "AMD B550",
+    "formFactor": "ATX",
+    "memType": "DDR4",
+    "ramSlots": 4,
+    "maxRamGB": 128,
+    "m2Slots": 2,
+    "sataPorts": 6,
+    "wifi": false
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "mb-asrock-b650m-pro-rs",
+   "category": "mainboard",
+   "brand": "ASRock",
+   "name": "ASRock B650M Pro RS",
+   "tier": 2,
+   "buyPrice": 125,
+   "sellPrice": 150,
+   "desc": "Kompaktes Micro-ATX-Board für AM5 mit DDR5. Günstiger Einstieg in die neue Plattform.",
+   "specs": {
+    "socket": "AM5",
+    "chipset": "AMD B650",
+    "formFactor": "mATX",
+    "memType": "DDR5",
+    "ramSlots": 4,
+    "maxRamGB": 128,
+    "m2Slots": 2,
+    "sataPorts": 4,
+    "wifi": false
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "mb-asus-tuf-gaming-b650-plus-wifi",
+   "category": "mainboard",
+   "brand": "ASUS",
+   "name": "ASUS TUF GAMING B650-PLUS WIFI",
+   "tier": 3,
+   "buyPrice": 185,
+   "sellPrice": 222,
+   "desc": "Robustes ATX-Board für AM5 mit DDR5, WLAN und drei M.2-Steckplätzen.",
+   "specs": {
+    "socket": "AM5",
+    "chipset": "AMD B650",
+    "formFactor": "ATX",
+    "memType": "DDR5",
+    "ramSlots": 4,
+    "maxRamGB": 128,
+    "m2Slots": 3,
+    "sataPorts": 4,
+    "wifi": true
+   },
+   "verified": "geprueft",
+   "source": "galaxus.de, Produktvergleich B650-Boards, abgerufen 2026-10-24",
+   "note": "Anzahl der SATA-Ports nicht in der Quelle; Spielwert."
+  },
+  {
+   "id": "mb-msi-mag-b650-tomahawk-wifi",
+   "category": "mainboard",
+   "brand": "MSI",
+   "name": "MSI MAG B650 TOMAHAWK WIFI",
+   "tier": 3,
+   "buyPrice": 215,
+   "sellPrice": 258,
+   "desc": "Starkes ATX-Board für AM5 mit DDR5 und WLAN, auch für leistungsstarke Prozessoren geeignet.",
+   "specs": {
+    "socket": "AM5",
+    "chipset": "AMD B650",
+    "formFactor": "ATX",
+    "memType": "DDR5",
+    "ramSlots": 4,
+    "maxRamGB": 256,
+    "m2Slots": 3,
+    "sataPorts": 6,
+    "wifi": true
+   },
+   "verified": "geprueft",
+   "source": "galaxus.de, Produktvergleich B650-Boards, abgerufen 2026-10-24",
+   "note": "Anzahl der SATA-Ports nicht in der Quelle; Spielwert.",
+   "unsure": [
+    "sataPorts"
+   ]
+  },
+  {
+   "id": "mb-gigabyte-z790-aorus-elite-ax",
+   "category": "mainboard",
+   "brand": "Gigabyte",
+   "name": "Gigabyte Z790 AORUS ELITE AX",
+   "tier": 3,
+   "buyPrice": 225,
+   "sellPrice": 270,
+   "desc": "ATX-Board für LGA1700 mit DDR5 und WLAN. Erlaubt Übertakten freigeschalteter Intel-Prozessoren.",
+   "specs": {
+    "socket": "LGA1700",
+    "chipset": "Intel Z790",
+    "formFactor": "ATX",
+    "memType": "DDR5",
+    "ramSlots": 4,
+    "maxRamGB": 192,
+    "m2Slots": 4,
+    "sataPorts": 6,
+    "wifi": true
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "mb-asus-rog-strix-z790-e-gaming-wifi",
+   "category": "mainboard",
+   "brand": "ASUS",
+   "name": "ASUS ROG STRIX Z790-E GAMING WIFI",
+   "tier": 4,
+   "buyPrice": 395,
+   "sellPrice": 474,
+   "desc": "High-End-ATX-Board für LGA1700 mit DDR5, viel Ausstattung und starker Stromversorgung.",
+   "specs": {
+    "socket": "LGA1700",
+    "chipset": "Intel Z790",
+    "formFactor": "ATX",
+    "memType": "DDR5",
+    "ramSlots": 4,
+    "maxRamGB": 192,
+    "m2Slots": 5,
+    "sataPorts": 4,
+    "wifi": true
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "category": "mainboard",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "mb-msi-b550-a-pro",
+   "brand": "MSI",
+   "name": "MSI B550-A PRO",
+   "tier": 2,
+   "buyPrice": 105,
+   "sellPrice": 126,
+   "desc": "Solides ATX-Mainboard für AM4 mit DDR4. Gute Basis für günstige Gaming-PCs.",
+   "specs": {
+    "socket": "AM4",
+    "chipset": "AMD B550",
+    "formFactor": "ATX",
+    "memType": "DDR4",
+    "ramSlots": 4,
+    "maxRamGB": 128,
+    "m2Slots": 2,
+    "sataPorts": 6,
+    "wifi": false
+   },
+   "unsure": [
+    "m2Slots",
+    "sataPorts"
+   ]
+  }
+ ]
+}

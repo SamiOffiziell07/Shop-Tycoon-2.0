@@ -1,0 +1,374 @@
+{
+ "schema": 1,
+ "category": "cpu",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "cpu-intel-core-i3-12100f",
+   "category": "cpu",
+   "brand": "Intel",
+   "name": "Intel Core i3-12100F",
+   "tier": 1,
+   "buyPrice": 80,
+   "sellPrice": 96,
+   "desc": "Günstiger Einstieg für Office- und Einsteiger-Gaming-PCs. Ohne integrierte Grafik, eine Grafikkarte ist nötig.",
+   "specs": {
+    "socket": "LGA1700",
+    "cores": 4,
+    "threads": 8,
+    "baseGHz": 3.3,
+    "boostGHz": 4.3,
+    "tdpW": 58,
+    "maxPowerW": 89,
+    "memTypes": [
+     "DDR4",
+     "DDR5"
+    ],
+    "igpu": false
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 30,
+    "multi": 22
+   }
+  },
+  {
+   "id": "cpu-amd-ryzen-5-5600",
+   "category": "cpu",
+   "brand": "AMD",
+   "name": "AMD Ryzen 5 5600",
+   "tier": 1,
+   "buyPrice": 115,
+   "sellPrice": 138,
+   "desc": "Bewährter AM4-Prozessor mit gutem Preis-Leistungs-Verhältnis. Nutzt DDR4, keine integrierte Grafik.",
+   "specs": {
+    "socket": "AM4",
+    "cores": 6,
+    "threads": 12,
+    "baseGHz": 3.5,
+    "boostGHz": 4.4,
+    "tdpW": 65,
+    "maxPowerW": 88,
+    "memTypes": [
+     "DDR4"
+    ],
+    "igpu": false
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 42,
+    "multi": 38
+   }
+  },
+  {
+   "id": "cpu-amd-ryzen-5-7600",
+   "category": "cpu",
+   "brand": "AMD",
+   "name": "AMD Ryzen 5 7600",
+   "tier": 2,
+   "buyPrice": 195,
+   "sellPrice": 234,
+   "desc": "Einstieg in die AM5-Plattform mit DDR5. Sparsam und schnell genug für starke Gaming-PCs der Mittelklasse.",
+   "specs": {
+    "socket": "AM5",
+    "cores": 6,
+    "threads": 12,
+    "baseGHz": 3.8,
+    "boostGHz": 5.1,
+    "tdpW": 65,
+    "maxPowerW": 88,
+    "memTypes": [
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 58,
+    "multi": 45
+   }
+  },
+  {
+   "id": "cpu-intel-core-i5-14600k",
+   "category": "cpu",
+   "brand": "Intel",
+   "name": "Intel Core i5-14600K",
+   "tier": 3,
+   "buyPrice": 295,
+   "sellPrice": 354,
+   "desc": "Starker Mittelklasse-Prozessor mit Performance- und Effizienzkernen. Läuft auf Boards mit DDR4 oder DDR5, je nach Mainboard.",
+   "specs": {
+    "socket": "LGA1700",
+    "cores": 14,
+    "threads": 20,
+    "pCores": 6,
+    "eCores": 8,
+    "baseGHz": 3.5,
+    "boostGHz": 5.3,
+    "tdpW": 125,
+    "maxPowerW": 181,
+    "memTypes": [
+     "DDR4",
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "geprueft",
+   "perf": {
+    "gaming": 70,
+    "multi": 68
+   },
+   "source": "notebookcheck.net, CPU-Vergleich 14600K/14700K/14900K, abgerufen 2026-10-24"
+  },
+  {
+   "id": "cpu-amd-ryzen-7-7800x3d",
+   "category": "cpu",
+   "brand": "AMD",
+   "name": "AMD Ryzen 7 7800X3D",
+   "tier": 4,
+   "buyPrice": 385,
+   "sellPrice": 462,
+   "desc": "Gaming-Spezialist mit großem 3D-V-Cache. Bei Spielen sehr stark, benötigt DDR5 und einen guten Kühler.",
+   "specs": {
+    "socket": "AM5",
+    "cores": 8,
+    "threads": 16,
+    "baseGHz": 4.2,
+    "boostGHz": 5,
+    "tdpW": 120,
+    "maxPowerW": 162,
+    "memTypes": [
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 84,
+    "multi": 58
+   },
+   "unsure": [
+    "maxPowerW"
+   ]
+  },
+  {
+   "id": "cpu-intel-core-i7-14700k",
+   "category": "cpu",
+   "brand": "Intel",
+   "name": "Intel Core i7-14700K",
+   "tier": 4,
+   "buyPrice": 390,
+   "sellPrice": 468,
+   "desc": "Viel Leistung für Gaming und Multitasking. Hoher Strombedarf unter Last, ein kräftiger Kühler lohnt sich.",
+   "specs": {
+    "socket": "LGA1700",
+    "cores": 20,
+    "threads": 28,
+    "pCores": 8,
+    "eCores": 12,
+    "baseGHz": 3.4,
+    "boostGHz": 5.6,
+    "tdpW": 125,
+    "maxPowerW": 253,
+    "memTypes": [
+     "DDR4",
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "teilweise",
+   "perf": {
+    "gaming": 80,
+    "multi": 80
+   },
+   "source": "notebookcheck.net, CPU-Vergleich 14600K/14700K/14900K, abgerufen 2026-10-24",
+   "note": "Basistakt in der Quelle widersprüchlich (2,5 bzw. 3,4 GHz); als Spielwert 3,4 GHz verwendet.",
+   "unsure": [
+    "baseGHz"
+   ]
+  },
+  {
+   "id": "cpu-intel-core-i9-14900k",
+   "category": "cpu",
+   "brand": "Intel",
+   "name": "Intel Core i9-14900K",
+   "tier": 5,
+   "buyPrice": 520,
+   "sellPrice": 624,
+   "desc": "Spitzenmodell der LGA1700-Plattform. Sehr hohe Leistung, aber auch sehr hoher Strom- und Kühlbedarf.",
+   "specs": {
+    "socket": "LGA1700",
+    "cores": 24,
+    "threads": 32,
+    "pCores": 8,
+    "eCores": 16,
+    "baseGHz": 3.2,
+    "boostGHz": 6,
+    "tdpW": 125,
+    "maxPowerW": 253,
+    "memTypes": [
+     "DDR4",
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "geprueft",
+   "perf": {
+    "gaming": 88,
+    "multi": 90
+   },
+   "source": "notebookcheck.net, CPU-Vergleich 14600K/14700K/14900K, abgerufen 2026-10-24"
+  },
+  {
+   "id": "cpu-amd-ryzen-9-7950x",
+   "category": "cpu",
+   "brand": "AMD",
+   "name": "AMD Ryzen 9 7950X",
+   "tier": 5,
+   "buyPrice": 530,
+   "sellPrice": 636,
+   "desc": "16 Kerne für anspruchsvolle Aufgaben und Gaming. Benötigt AM5, DDR5 und gute Kühlung.",
+   "specs": {
+    "socket": "AM5",
+    "cores": 16,
+    "threads": 32,
+    "baseGHz": 4.5,
+    "boostGHz": 5.7,
+    "tdpW": 170,
+    "maxPowerW": 230,
+    "memTypes": [
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "verified": "ungeprueft",
+   "perf": {
+    "gaming": 82,
+    "multi": 95
+   },
+   "unsure": [
+    "maxPowerW"
+   ]
+  },
+  {
+   "category": "cpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "cpu-intel-core-i5-12400f",
+   "brand": "Intel",
+   "name": "Intel Core i5-12400F",
+   "tier": 1,
+   "buyPrice": 105,
+   "sellPrice": 126,
+   "desc": "Beliebter Sechskerner für günstige Gaming-PCs. Ohne integrierte Grafik, eine Grafikkarte ist nötig.",
+   "specs": {
+    "socket": "LGA1700",
+    "cores": 6,
+    "threads": 12,
+    "baseGHz": 2.5,
+    "boostGHz": 4.4,
+    "tdpW": 65,
+    "maxPowerW": 117,
+    "memTypes": [
+     "DDR4",
+     "DDR5"
+    ],
+    "igpu": false
+   },
+   "perf": {
+    "gaming": 38,
+    "multi": 30
+   }
+  },
+  {
+   "category": "cpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "cpu-amd-ryzen-7-5700x",
+   "brand": "AMD",
+   "name": "AMD Ryzen 7 5700X",
+   "tier": 2,
+   "buyPrice": 150,
+   "sellPrice": 180,
+   "desc": "Achtkerner für die AM4-Plattform mit DDR4. Sparsam, ohne integrierte Grafik.",
+   "specs": {
+    "socket": "AM4",
+    "cores": 8,
+    "threads": 16,
+    "baseGHz": 3.4,
+    "boostGHz": 4.6,
+    "tdpW": 65,
+    "maxPowerW": 88,
+    "memTypes": [
+     "DDR4"
+    ],
+    "igpu": false
+   },
+   "perf": {
+    "gaming": 52,
+    "multi": 48
+   }
+  },
+  {
+   "category": "cpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "cpu-amd-ryzen-7-7700x",
+   "brand": "AMD",
+   "name": "AMD Ryzen 7 7700X",
+   "tier": 3,
+   "buyPrice": 270,
+   "sellPrice": 324,
+   "desc": "Schneller Achtkerner für AM5 mit DDR5. Gute Wahl für Gaming und Streaming.",
+   "specs": {
+    "socket": "AM5",
+    "cores": 8,
+    "threads": 16,
+    "baseGHz": 4.5,
+    "boostGHz": 5.4,
+    "tdpW": 105,
+    "maxPowerW": 142,
+    "memTypes": [
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "perf": {
+    "gaming": 66,
+    "multi": 58
+   }
+  },
+  {
+   "category": "cpu",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "cpu-amd-ryzen-9-7900x",
+   "brand": "AMD",
+   "name": "AMD Ryzen 9 7900X",
+   "tier": 4,
+   "buyPrice": 410,
+   "sellPrice": 492,
+   "desc": "Zwölf Kerne für Gaming und kreative Arbeit. Braucht AM5, DDR5 und einen guten Kühler.",
+   "specs": {
+    "socket": "AM5",
+    "cores": 12,
+    "threads": 24,
+    "baseGHz": 4.7,
+    "boostGHz": 5.6,
+    "tdpW": 170,
+    "maxPowerW": 230,
+    "memTypes": [
+     "DDR5"
+    ],
+    "igpu": true
+   },
+   "perf": {
+    "gaming": 76,
+    "multi": 85
+   },
+   "unsure": [
+    "maxPowerW"
+   ]
+  }
+ ]
+}

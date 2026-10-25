@@ -1,0 +1,149 @@
+{
+ "schema": 1,
+ "category": "ssd",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "ssd-samsung-870-evo-1tb",
+   "category": "ssd",
+   "brand": "Samsung",
+   "name": "Samsung 870 EVO 1 TB",
+   "tier": 1,
+   "buyPrice": 75,
+   "sellPrice": 90,
+   "desc": "Zuverlässige SATA-SSD im 2,5-Zoll-Format. Preiswerter Systemspeicher für einfache PCs.",
+   "specs": {
+    "interface": "SATA III",
+    "bus": "sata",
+    "formFactor": "2,5 Zoll",
+    "capacityGB": 1000,
+    "readMBs": 560,
+    "writeMBs": 530
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ssd-crucial-p3-plus-2tb",
+   "category": "ssd",
+   "brand": "Crucial",
+   "name": "Crucial P3 Plus 2 TB",
+   "tier": 2,
+   "buyPrice": 120,
+   "sellPrice": 144,
+   "desc": "Viel Platz auf einer schnellen NVMe-SSD mit PCIe 4.0. Günstig für große Spielebibliotheken.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 2000,
+    "readMBs": 5000,
+    "writeMBs": 4200
+   },
+   "verified": "geprueft",
+   "source": "galaxus.ch, Vergleich Crucial P3 Plus/Samsung 990 PRO (2-TB-Variante), abgerufen 2026-10-24"
+  },
+  {
+   "id": "ssd-wd-black-sn850x-1tb",
+   "category": "ssd",
+   "brand": "Western Digital",
+   "name": "WD_BLACK SN850X 1 TB",
+   "tier": 3,
+   "buyPrice": 95,
+   "sellPrice": 114,
+   "desc": "Schnelle NVMe-SSD für Gaming mit PCIe 4.0 und sehr kurzen Ladezeiten.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 1000,
+    "readMBs": 7300,
+    "writeMBs": 6300
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ssd-samsung-990-pro-1tb",
+   "category": "ssd",
+   "brand": "Samsung",
+   "name": "Samsung 990 PRO 1 TB",
+   "tier": 3,
+   "buyPrice": 110,
+   "sellPrice": 132,
+   "desc": "Hochwertige NVMe-SSD mit PCIe 4.0 und sehr guter Dauerleistung.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 1000,
+    "readMBs": 7450,
+    "writeMBs": 6900
+   },
+   "verified": "teilweise",
+   "source": "galaxus.ch, Vergleich Crucial P3 Plus/Samsung 990 PRO (2-TB-Variante), abgerufen 2026-10-24",
+   "note": "Quelle bestätigt die Werte für die 2-TB-Variante; für 1 TB übernommen."
+  },
+  {
+   "id": "ssd-samsung-990-pro-2tb",
+   "category": "ssd",
+   "brand": "Samsung",
+   "name": "Samsung 990 PRO 2 TB",
+   "tier": 4,
+   "buyPrice": 180,
+   "sellPrice": 216,
+   "desc": "Top-NVMe-SSD mit 2 TB für anspruchsvolle Gaming- und Arbeits-PCs.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 2000,
+    "readMBs": 7450,
+    "writeMBs": 6900
+   },
+   "verified": "geprueft",
+   "source": "galaxus.ch, Vergleich Crucial P3 Plus/Samsung 990 PRO, abgerufen 2026-10-24"
+  },
+  {
+   "category": "ssd",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "ssd-kingston-nv2-500gb",
+   "brand": "Kingston",
+   "name": "Kingston NV2 500GB",
+   "tier": 1,
+   "buyPrice": 35,
+   "sellPrice": 42,
+   "desc": "Günstige NVMe-SSD für Office-PCs und Einsteiger-Systeme.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 500,
+    "readMBs": 3500,
+    "writeMBs": 2100
+   }
+  },
+  {
+   "category": "ssd",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "ssd-wd-black-sn850x-2tb",
+   "brand": "Western Digital",
+   "name": "WD_BLACK SN850X 2TB",
+   "tier": 4,
+   "buyPrice": 160,
+   "sellPrice": 192,
+   "desc": "Sehr schnelle NVMe-SSD mit viel Platz für Spiele und Projekte.",
+   "specs": {
+    "interface": "NVMe PCIe 4.0",
+    "bus": "m2",
+    "formFactor": "M.2 2280",
+    "capacityGB": 2000,
+    "readMBs": 7300,
+    "writeMBs": 6600
+   },
+   "unsure": [
+    "writeMBs"
+   ]
+  }
+ ]
+}

@@ -1,0 +1,169 @@
+{
+ "schema": 1,
+ "category": "case",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "case-corsair-4000d-airflow",
+   "category": "case",
+   "brand": "Corsair",
+   "name": "Corsair 4000D Airflow",
+   "tier": 2,
+   "buyPrice": 100,
+   "sellPrice": 120,
+   "desc": "Beliebtes ATX-Gehäuse mit viel Luftdurchsatz und genug Platz für große Grafikkarten.",
+   "specs": {
+    "formFactors": [
+     "ATX",
+     "mATX",
+     "ITX"
+    ],
+    "maxGpuMM": 360,
+    "maxCoolerMM": 170,
+    "radiators": {
+     "front": 360
+    },
+    "fansIncluded": 2,
+    "fanSizeMM": 120
+   },
+   "verified": "geprueft",
+   "perf": {
+    "airflow": 72
+   },
+   "source": "computermania.co.za, Produktseite 4000D Airflow, abgerufen 2026-10-24",
+   "note": "Bestätigt: ATX-Mid-Tower, GPU 360 mm, Kühler 170 mm, Radiator bis 360 mm vorn, 2× 120-mm-Lüfter. Unterstützung für mATX/ITX nicht in der Quelle."
+  },
+  {
+   "id": "case-lian-li-lancool-216",
+   "category": "case",
+   "brand": "Lian Li",
+   "name": "Lian Li LANCOOL 216",
+   "tier": 3,
+   "buyPrice": 110,
+   "sellPrice": 132,
+   "desc": "Großzügiges Gehäuse mit zwei großen Frontlüftern und viel Platz für Hardware.",
+   "specs": {
+    "formFactors": [
+     "ATX",
+     "mATX",
+     "ITX"
+    ],
+    "maxGpuMM": 392,
+    "maxCoolerMM": 180,
+    "radiators": {
+     "front": 360,
+     "top": 360,
+     "bottom": 240
+    },
+    "fansIncluded": 3,
+    "fanSizeMM": 160
+   },
+   "verified": "geprueft",
+   "perf": {
+    "airflow": 85
+   },
+   "source": "lanoc.org, Vorstellung LANCOOL 216, abgerufen 2026-10-24",
+   "note": "Bestätigt: bis E-ATX, GPU 392 mm, CPU-Freiraum 180,5 mm, Radiatoren vorn/oben 360 mm, unten 240 mm, Lüfter 2×160 + 1×140 mm (als 3 Lüfter geführt). Gehäusemaße stammen aus Händler- und Herstellerangaben; Varianten (z. B. RGB, Farbe) können abweichen."
+  },
+  {
+   "id": "case-nzxt-h5-flow",
+   "category": "case",
+   "brand": "NZXT",
+   "name": "NZXT H5 Flow",
+   "tier": 2,
+   "buyPrice": 95,
+   "sellPrice": 114,
+   "desc": "Kompaktes ATX-Gehäuse mit guter Belüftung und aufgeräumtem Innenraum.",
+   "specs": {
+    "formFactors": [
+     "ATX",
+     "mATX",
+     "ITX"
+    ],
+    "maxGpuMM": 365,
+    "maxCoolerMM": 165,
+    "radiators": {
+     "front": 280,
+     "top": 240,
+     "rear": 120
+    },
+    "fansIncluded": 2,
+    "fanSizeMM": 120
+   },
+   "verified": "teilweise",
+   "perf": {
+    "airflow": 78
+   },
+   "source": "pbtech.co.nz, Produktseite H5 Flow, abgerufen 2026-10-24",
+   "note": "Bestätigt: GPU 365 mm, Kühler 165 mm, Radiatoren vorn 280 / oben 240 / hinten 120 mm. Die Lüfterzahl hängt von der Variante ab (Quelle nennt auch 2× 140 mm RGB); als 2 Lüfter geführt.",
+   "unsure": [
+    "fansIncluded"
+   ]
+  },
+  {
+   "id": "case-fractal-design-north",
+   "category": "case",
+   "brand": "Fractal Design",
+   "name": "Fractal Design North",
+   "tier": 4,
+   "buyPrice": 150,
+   "sellPrice": 180,
+   "desc": "Hochwertiges ATX-Gehäuse mit Holzfront und zwei 140-mm-Lüftern. Schick und leise.",
+   "specs": {
+    "formFactors": [
+     "ATX",
+     "mATX",
+     "ITX"
+    ],
+    "maxGpuMM": 355,
+    "maxCoolerMM": 170,
+    "radiators": {
+     "front": 360
+    },
+    "fansIncluded": 2,
+    "fanSizeMM": 140
+   },
+   "verified": "teilweise",
+   "perf": {
+    "airflow": 70
+   },
+   "source": "box.co.uk, Produktseite Fractal Design North, abgerufen 2026-10-24",
+   "note": "Bestätigt: ATX/mATX/ITX, GPU 355 mm, 360-mm-Radiator vorn, 2× 140 mm PWM. Kühlerhöhe in der Quelle widersprüchlich (145 bzw. 170 mm); als Spielwert 170 mm.",
+   "unsure": [
+    "maxCoolerMM"
+   ]
+  },
+  {
+   "id": "case-fractal-design-pop-mini-air",
+   "category": "case",
+   "brand": "Fractal Design",
+   "name": "Fractal Design Pop Mini Air",
+   "tier": 2,
+   "buyPrice": 75,
+   "sellPrice": 90,
+   "desc": "Kompaktes Micro-ATX-Gehäuse mit Mesh-Front. ATX-Mainboards passen hier nicht hinein!",
+   "specs": {
+    "formFactors": [
+     "mATX",
+     "ITX"
+    ],
+    "maxGpuMM": 365,
+    "maxCoolerMM": 170,
+    "radiators": {},
+    "fansIncluded": 2,
+    "fanSizeMM": 120
+   },
+   "verified": "teilweise",
+   "perf": {
+    "airflow": 68
+   },
+   "source": "digitec.ch, Produktseite Pop Mini Air RGB, abgerufen 2026-10-24",
+   "note": "Bestätigt: nur bis Micro-ATX, GPU bis 365 mm. Kühlerhöhe, Radiatorplätze und Lüfter nicht bestätigt (Spielwerte). Gehäusemaße stammen aus Händler- und Herstellerangaben; Varianten (z. B. RGB, Farbe) können abweichen.",
+   "unsure": [
+    "maxCoolerMM",
+    "radiators",
+    "fansIncluded"
+   ]
+  }
+ ]
+}

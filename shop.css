@@ -1,0 +1,243 @@
+/* shop.css – Hardware-Shop und Lager (Phase 2). Ergänzt style.css, ändert nichts an bestehenden Regeln. */
+
+#shopBtn, #stockBtn {
+  position: absolute;
+  top: calc(var(--sat) + 8px);
+}
+#shopBtn { right: calc(var(--sar) + 66px); }
+#stockBtn { right: calc(var(--sar) + 120px); }
+
+.overlay.shop {
+  align-items: stretch;
+  justify-content: stretch;
+  padding: calc(var(--sat) + 6px) calc(var(--sar) + 8px) calc(var(--sab) + 6px) calc(var(--sal) + 8px);
+  background: rgba(8, 13, 24, 0.97);
+  z-index: 60;
+}
+.shop-wrap {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  min-height: 0;
+  gap: 6px;
+}
+
+/* Kopfzeile */
+.shop-head { display: flex; align-items: center; gap: 8px; flex: 0 0 auto; }
+.shop-btn {
+  min-height: 44px;
+  padding: 0 14px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+.tabs { display: flex; flex: 1 1 auto; gap: 6px; justify-content: center; }
+.tab {
+  min-height: 44px;
+  padding: 0 16px;
+  border-radius: 12px;
+  border: 1px solid transparent;
+  background: transparent;
+  color: var(--muted);
+  font-size: 16px;
+  font-weight: 800;
+  touch-action: manipulation;
+}
+.tab.active { background: var(--accent); color: #fff; }
+.badge {
+  display: inline-block;
+  min-width: 20px;
+  padding: 1px 6px;
+  margin-left: 4px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.22);
+  font-size: 13px;
+}
+.shop-money {
+  flex: 0 0 auto;
+  padding: 9px 14px;
+  border-radius: 999px;
+  background: rgba(34, 193, 166, 0.16);
+  border: 1px solid rgba(34, 193, 166, 0.5);
+  color: #7ff0d9;
+  font-size: 17px;
+  font-weight: 800;
+  white-space: nowrap;
+}
+
+/* Kategorien */
+.cats {
+  display: flex;
+  gap: 6px;
+  flex: 0 0 auto;
+  overflow-x: auto;
+  overflow-y: hidden;
+  touch-action: pan-x;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  padding-bottom: 2px;
+}
+.cats::-webkit-scrollbar { display: none; }
+.cat {
+  flex: 0 0 auto;
+  min-height: 42px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: rgba(255, 255, 255, 0.06);
+  color: var(--text);
+  font-size: 15px;
+  font-weight: 700;
+  white-space: nowrap;
+  touch-action: manipulation;
+}
+.cat.active { background: rgba(59, 130, 246, 0.35); border-color: var(--accent); }
+.cat small { margin-left: 4px; color: var(--muted); font-weight: 600; }
+
+/* Liste und Detail */
+.shop-body { display: grid; grid-template-columns: minmax(0, 45%) minmax(0, 55%); gap: 8px; flex: 1 1 auto; min-height: 0; }
+.list, .detail {
+  min-height: 0;
+  overflow-y: auto;
+  overflow-x: hidden;
+  touch-action: pan-y;
+  -webkit-overflow-scrolling: touch;
+  overscroll-behavior: contain;
+  border-radius: 14px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+.list { padding: 6px; }
+.detail { padding: 0; position: relative; }
+
+.row-item {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 64px;
+  margin: 0 0 6px;
+  padding: 8px 10px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.05);
+  color: var(--text);
+  text-align: left;
+  touch-action: manipulation;
+}
+.row-item.selected { border-color: var(--accent); background: rgba(59, 130, 246, 0.22); }
+.row-ico { flex: 0 0 44px; width: 44px; height: 44px; }
+.row-main { flex: 1 1 auto; min-width: 0; }
+.row-name { font-size: 15px; font-weight: 800; line-height: 1.2; overflow: hidden; display: -webkit-box; -webkit-line-clamp: 2; -webkit-box-orient: vertical; }
+.row-sub { margin-top: 2px; font-size: 13px; color: var(--muted); white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.row-side { flex: 0 0 auto; text-align: right; font-size: 15px; font-weight: 800; }
+.row-side .stock { display: block; margin-top: 2px; font-size: 12px; font-weight: 700; color: #7ff0d9; }
+.row-side .stock.none { color: var(--muted); font-weight: 600; }
+
+.empty { padding: 22px 14px; text-align: center; color: var(--muted); line-height: 1.45; }
+.empty .btn { margin-top: 12px; }
+
+/* Detailansicht */
+.det-inner { padding: 12px 12px 8px; }
+.det-top { display: flex; gap: 12px; align-items: center; }
+.det-ico { flex: 0 0 72px; width: 72px; height: 72px; border-radius: 14px; background: rgba(255, 255, 255, 0.06); padding: 6px; }
+.det-name { font-size: 18px; font-weight: 800; line-height: 1.2; }
+.det-brand { font-size: 13px; color: var(--muted); margin-top: 2px; }
+.det-desc { margin: 10px 0 8px; font-size: 14px; line-height: 1.4; color: #dbe5f5; }
+.specs { width: 100%; border-collapse: collapse; font-size: 14px; }
+.specs td { padding: 5px 0; border-top: 1px solid rgba(255, 255, 255, 0.08); vertical-align: top; }
+.specs td:first-child { color: var(--muted); padding-right: 10px; width: 42%; }
+.specs td:last-child { font-weight: 700; text-align: right; }
+.prices { display: flex; gap: 8px; margin: 10px 0 0; }
+.price-box { flex: 1 1 0; padding: 8px 10px; border-radius: 12px; background: rgba(255, 255, 255, 0.06); }
+.price-box span { display: block; font-size: 12px; color: var(--muted); }
+.price-box b { font-size: 18px; }
+.datastate { margin: 10px 0 4px; padding: 8px 10px; border-radius: 12px; font-size: 12.5px; line-height: 1.4; background: rgba(255, 180, 84, 0.1); border: 1px solid rgba(255, 180, 84, 0.3); color: #ffd9a6; }
+.datastate.ok { background: rgba(34, 193, 166, 0.1); border-color: rgba(34, 193, 166, 0.35); color: #a9f2e5; }
+.stocknow { margin-top: 10px; padding: 10px 12px; border-radius: 12px; background: rgba(34, 193, 166, 0.14); font-size: 16px; font-weight: 800; color: #7ff0d9; }
+
+/* Kaufleiste (bleibt unten sichtbar) */
+.buybar {
+  position: sticky;
+  bottom: 0;
+  padding: 8px 12px 10px;
+  background: rgba(14, 22, 38, 0.98);
+  border-top: 1px solid rgba(255, 255, 255, 0.12);
+}
+.qty-row { display: flex; align-items: center; gap: 6px; }
+.qbtn {
+  flex: 0 0 auto;
+  width: 48px;
+  min-height: 48px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--text);
+  font-size: 24px;
+  font-weight: 800;
+  touch-action: manipulation;
+}
+.qval { flex: 0 0 auto; min-width: 44px; text-align: center; font-size: 22px; font-weight: 800; }
+.qchip {
+  flex: 0 0 auto;
+  min-height: 48px;
+  padding: 0 11px;
+  border-radius: 12px;
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  background: transparent;
+  color: var(--muted);
+  font-size: 15px;
+  font-weight: 700;
+  touch-action: manipulation;
+}
+.qchip.active { color: var(--text); border-color: var(--accent); }
+.total { margin-left: auto; text-align: right; font-size: 17px; font-weight: 800; }
+.total.bad { color: #ff8f8f; }
+.buy-btn {
+  display: block;
+  width: 100%;
+  min-height: 52px;
+  margin-top: 8px;
+  border: 0;
+  border-radius: 14px;
+  background: var(--accent-2);
+  color: #04221d;
+  font-size: 18px;
+  font-weight: 800;
+  touch-action: manipulation;
+}
+.buy-btn:active { filter: brightness(0.88); }
+.buy-btn.secondary { background: rgba(255, 255, 255, 0.12); color: var(--text); }
+.msg { margin-top: 8px; padding: 9px 12px; border-radius: 12px; font-size: 15px; font-weight: 700; line-height: 1.35; }
+.msg.ok { background: rgba(34, 193, 166, 0.2); color: #8ff5df; border: 1px solid rgba(34, 193, 166, 0.5); }
+.msg.err { background: rgba(255, 99, 99, 0.16); color: #ffb0b0; border: 1px solid rgba(255, 99, 99, 0.5); }
+.back-list { display: none; }
+.pricenote { margin: 8px 0 0; font-size: 12px; color: var(--muted); }
+
+/* Schmale Bildschirme (Hochformat): erst Liste, nach Antippen die Details */
+@media (max-width: 599px) {
+  .shop-head { flex-wrap: wrap; }
+  .shop-btn { flex: 1 1 auto; }
+  .tabs { order: 3; flex: 1 0 100%; }
+  .tab { flex: 1 1 0; }
+  .shop-money { flex: 0 0 auto; }
+  .shop-body { grid-template-columns: minmax(0, 1fr); }
+  .shop-body .detail { display: none; }
+  .shop.show-detail .shop-body .list { display: none; }
+  .shop.show-detail .shop-body .detail { display: block; }
+  .back-list { display: block; margin: 8px 12px 0; }
+}
+
+/* Sehr niedrige Querformat-Ansicht */
+@media (max-height: 430px) and (min-width: 600px) {
+  .shop-head { gap: 6px; }
+  .shop-btn, .tab { min-height: 40px; }
+  .cat { min-height: 38px; }
+  .row-item { min-height: 58px; }
+  .det-ico { flex-basis: 56px; width: 56px; height: 56px; }
+}

@@ -1,0 +1,116 @@
+{
+ "schema": 1,
+ "category": "ram",
+ "note": "Spielpreise in Euro (Einkauf/Verkauf) sind frei gewählte Spielwerte und keine aktuellen Marktpreise. Technische Daten: siehe Feld 'verified' je Produkt (geprueft / teilweise / ungeprueft); unsichere Felder stehen in 'unsure'. Leistungswerte unter 'perf' sind reine Spielwerte (0-100) und keine Messwerte.",
+ "items": [
+  {
+   "id": "ram-corsair-vengeance-lpx-16gb-ddr4-3200",
+   "category": "ram",
+   "brand": "Corsair",
+   "name": "Corsair Vengeance LPX 16 GB (2×8 GB) DDR4-3200",
+   "tier": 1,
+   "buyPrice": 42,
+   "sellPrice": 50,
+   "desc": "Günstiges DDR4-Kit mit niedriger Bauhöhe. Für Büro- und Einsteiger-PCs.",
+   "specs": {
+    "memType": "DDR4",
+    "capacityGB": 16,
+    "modules": 2,
+    "speedMTs": 3200,
+    "cl": 16
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ram-kingston-fury-beast-32gb-ddr4-3200",
+   "category": "ram",
+   "brand": "Kingston",
+   "name": "Kingston FURY Beast 32 GB (2×16 GB) DDR4-3200",
+   "tier": 2,
+   "buyPrice": 72,
+   "sellPrice": 86,
+   "desc": "Viel Speicher für DDR4-Systeme zum fairen Preis.",
+   "specs": {
+    "memType": "DDR4",
+    "capacityGB": 32,
+    "modules": 2,
+    "speedMTs": 3200,
+    "cl": 16
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ram-kingston-fury-beast-32gb-ddr5-5600",
+   "category": "ram",
+   "brand": "Kingston",
+   "name": "Kingston FURY Beast 32 GB (2×16 GB) DDR5-5600",
+   "tier": 2,
+   "buyPrice": 110,
+   "sellPrice": 132,
+   "desc": "DDR5-Einstiegskit für AM5- und LGA1700-Boards mit DDR5.",
+   "specs": {
+    "memType": "DDR5",
+    "capacityGB": 32,
+    "modules": 2,
+    "speedMTs": 5600,
+    "cl": 40
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ram-corsair-vengeance-32gb-ddr5-6000",
+   "category": "ram",
+   "brand": "Corsair",
+   "name": "Corsair Vengeance 32 GB (2×16 GB) DDR5-6000",
+   "tier": 3,
+   "buyPrice": 130,
+   "sellPrice": 156,
+   "desc": "Schnelles DDR5-Kit mit niedriger Latenz, beliebt für Gaming-PCs mit AM5.",
+   "specs": {
+    "memType": "DDR5",
+    "capacityGB": 32,
+    "modules": 2,
+    "speedMTs": 6000,
+    "cl": 30
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "id": "ram-corsair-vengeance-64gb-ddr5-6000",
+   "category": "ram",
+   "brand": "Corsair",
+   "name": "Corsair Vengeance 64 GB (2×32 GB) DDR5-6000",
+   "tier": 4,
+   "buyPrice": 250,
+   "sellPrice": 300,
+   "desc": "Große Kapazität für Arbeits- und Workstation-PCs sowie anspruchsvolle Kunden.",
+   "specs": {
+    "memType": "DDR5",
+    "capacityGB": 64,
+    "modules": 2,
+    "speedMTs": 6000,
+    "cl": 30
+   },
+   "verified": "ungeprueft"
+  },
+  {
+   "category": "ram",
+   "verified": "ungeprueft",
+   "note": "Daten aus allgemeinem Herstellerwissen, nicht einzeln mit einer Quelle belegt; Preise und Leistungswerte sind Spielwerte.",
+   "id": "ram-kingston-fury-beast-16gb-ddr5-5600",
+   "brand": "Kingston",
+   "name": "Kingston FURY Beast 16GB DDR5-5600",
+   "tier": 1,
+   "buyPrice": 60,
+   "sellPrice": 72,
+   "desc": "Günstiger DDR5-Einstieg mit zwei Modulen für Dual-Channel.",
+   "specs": {
+    "memType": "DDR5",
+    "capacityGB": 16,
+    "modules": 2,
+    "speedMTs": 5600,
+    "cl": 40
+   }
+  }
+ ]
+}
